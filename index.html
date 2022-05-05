@@ -1,0 +1,121 @@
+<!doctype html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Audio Quotes  </title>
+    
+    <script>
+      function play(str) {
+
+        if(str === "Q" || str === "q") {
+          document.getElementById("display").innerText = "atmospheric prelude drum"
+        } else if (str === "w" || str === "W") {
+          document.getElementById("display").innerText = "look-inside-yourself-simba"
+        }  else if (str === "e" || str === "E") {
+          document.getElementById("display").innerText = "s-no-normal-life"
+        }  else if (str === "a" || str === "A") {
+          document.getElementById("display").innerText = "protect-life-until-death"
+        }  else if (str === "s" || str === "S") {
+          document.getElementById("display").innerText = "what-we-do-in-life-echoes-in-eternity"
+        }  else if (str === "D" || str === "d") {
+          document.getElementById("display").innerText = "life's-a-garden"
+        }  else if (str === "z" || str === "Z") {
+          document.getElementById("display").innerText = "but-the-only-thing-predictable-about-life-is-its-unpredictability"
+        }  else if (str === "x" || str === "X") {
+          document.getElementById("display").innerText = "you're-going-to-live"
+        }  else if (str === "c" || str === "C") {
+          document.getElementById("display").innerText = "there's-no-normal-life"
+        }
+      
+
+        var audio = document.getElementById(str);
+        audio.play();
+      }
+      window.document.onkeyup = function(event) {
+        let keyStroke = event.key;
+        if(keyStroke === "Q" || keyStroke === "q") {
+          play("Q");
+        } else if (keyStroke === "w" || keyStroke === "W") {
+          play("W");
+        }  else if (keyStroke === "e" || keyStroke === "E") {
+          play("E");
+        }  else if (keyStroke === "a" || keyStroke === "A") {
+          play("A");
+        }  else if (keyStroke === "s" || keyStroke === "S") {
+          play("S");
+        }  else if (keyStroke === "D" || keyStroke === "d") {
+          play("D");
+        }  else if (keyStroke === "z" || keyStroke === "Z") {
+          play("Z");
+        }  else if (keyStroke === "x" || keyStroke === "X") {
+          play("X");
+        }  else if (keyStroke === "c" || keyStroke === "C") {
+          play("C");
+        }
+      
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1 class="text-center">Audio Quotes  </h1>
+      <div class="container" id="drum-machine">
+        <div class="card my-3">
+          <div class="card-body">
+          <div id="display" class="text-center">Empty display</div>
+        </div>
+        </div>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-0" onclick="play('Q')" >
+            Q
+            <audio src="./clip/mixkit-atmospheric-prelude-drum-roll-569.wav" class="clip" id="Q"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-1" onclick="play('W')">
+            W
+            <audio src="./clip/look-inside-yourself-simba-you-are-more-than-what-you-have-become-you-must-take-your-place-in-the-circle-of-life.mp3" class="clip" id="W"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-2" onclick="play('E')">
+            E
+            <audio src="./clip/there's-no-normal-life-wyatt-there's-just-life-now-get-on-with-it.mp3" class="clip" id="E"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-3" onclick="play('A')">
+            A
+            <audio src="./clip/protect-life-until-death-me1.mp3" class="clip" id="A"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-4" onclick="play('S')">
+            S
+            <audio src="./clip/brothers-what-we-do-in-life-echoes-in-eternity.mp3" class="clip" id="S"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-5" onclick="play('D')">
+            D
+            <audio src="./clip/life's-a-garden-dig-it-you-make-it-work-for-you-you-never-give-up-man-that's-my-philosophy.mp3" class="clip" id="D"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-6" onclick="play('Z')">
+            Z
+            <audio src="./clip/but-the-only-thing-predictable-about-life-is-its-unpredictability.mp3" class="clip" id="Z"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-7" onclick="play('X')">
+            X
+            <audio src="./clip/i'm-sorry-to-disappoint-you-but-you're-going-to-live-to-enjoy-all-the-glorious-fruits-life-has-to-offer-acne-shaving-premature-ejaculation-and-your-first-divorce.mp3" class="clip" id="X"></audio>
+          </button>
+          <button class= "drum-pad btn btn-block btn-success" id="drum-8" onclick="play('C')">
+            C
+            <audio src="./clip/there's-no-normal-life-wyatt-there's-just-life-now-get-on-with-it.mp3" class="clip" id="C"></audio>
+          </button>
+   
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
